@@ -1,3 +1,10 @@
+from __future__ import division 
+import pandas as pd
+import numpy as np
+from sklearn.neural_network import MLPClassifier as nn
+from sklearn.linear_model import LinearRegression as LR
+
+
 def detect_contact(data, fluid_type):
     if fluid_type == ["gas", "oil", "water"]:
         X = data[['depth', 'temp', 'pressure']]
